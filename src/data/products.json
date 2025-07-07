@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "name": "Hoodie Essential",
+    "type": "Hoodie",
+    "material": "Coton bio",
+    "price": 45.99,
+    "originalPrice": 65.99,
+    "description": "Le hoodie parfait pour un style décontracté et confortable. Fabriqué en coton biologique certifié, il allie douceur et durabilité.",
+    "image": "hoodie1.jpg",
+    "images": [
+      "hoodie1.jpg",
+      "hoodie1-2.jpg",
+      "hoodie1-3.jpg"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Noir", "Gris", "Blanc"],
+    "isNew": false,
+    "isOnSale": true
+  },
+  {
+    "id": 2,
+    "name": "T-shirt Vintage",
+    "type": "T-shirt",
+    "material": "Coton bio",
+    "price": 24.99,
+    "description": "T-shirt au design vintage avec une coupe moderne. Parfait pour un look casual chic.",
+    "image": "tshirt1.jpg",
+    "images": [
+      "tshirt1.jpg",
+      "tshirt1-2.jpg"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Blanc", "Noir", "Bleu"],
+    "isNew": true,
+    "isOnSale": false
+  },
+  {
+    "id": 3,
+    "name": "Jean Slim Urban",
+    "type": "Pantalon",
+    "material": "Polyester recyclé",
+    "price": 59.99,
+    "description": "Jean slim taille haute, confortable et résistant. Fabriqué à partir de polyester recyclé.",
+    "image": "jean1.jpg",
+    "images": [
+      "jean1.jpg",
+      "jean1-2.jpg"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Bleu", "Noir"],
+    "isNew": false,
+    "isOnSale": false
+  },
+  {
+    "id": 4,
+    "name": "Veste Bomber",
+    "type": "Veste",
+    "material": "Polyester recyclé",
+    "price": 79.99,
+    "originalPrice": 99.99,
+    "description": "Veste bomber urbaine avec finitions premium. Style intemporel et matières durables.",
+    "image": "bomber1.jpg",
+    "images": [
+      "bomber1.jpg",
+      "bomber1-2.jpg"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Vert", "Noir", "Bleu"],
+    "isNew": false,
+    "isOnSale": true
+  },
+  {
+    "id": 5,
+    "name": "Sweat Crop",
+    "type": "Hoodie",
+    "material": "Coton bio",
+    "price": 39.99,
+    "description": "Sweat court tendance pour un style moderne et féminin. Douceur et confort garantis.",
+    "image": "crop1.jpg",
+    "images": [
+      "crop1.jpg",
+      "crop1-2.jpg"
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Rose", "Blanc", "Gris"],
+    "isNew": true,
+    "isOnSale": false
+  },
+  {
+    "id": 6,
+    "name": "Chemise Lin",
+    "type": "T-shirt",
+    "material": "Lin",
+    "price": 49.99,
+    "description": "Chemise en lin naturel, parfaite pour les beaux jours. Respirante et élégante.",
+    "image": "chemise1.jpg",
+    "images": [
+      "chemise1.jpg",
+      "chemise1-2.jpg"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Blanc", "Beige"],
+    "isNew": false,
+    "isOnSale": false
+  },
+  {
+    "id": 7,
+    "name": "Pantalon Cargo",
+    "type": "Pantalon",
+    "material": "Coton bio",
+    "price": 54.99,
+    "description": "Pantalon cargo avec multiples poches, alliant style urban et praticité.",
+    "image": "cargo1.jpg",
+    "images": [
+      "cargo1.jpg",
+      "cargo1-2.jpg"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Kaki", "Noir", "Beige"],
+    "isNew": false,
+    "isOnSale": false
+  },
+  {
+    "id": 8,
+    "name": "Pull Mérinos",
+    "type": "Hoodie",
+    "material": "Laine mérinos",
+    "price": 69.99,
+    "description": "Pull en laine mérinos ultra-douce, thermorégulatrice et naturellement antibactérienne.",
+    "image": "pull1.jpg",
+    "images": [
+      "pull1.jpg",
+      "pull1-2.jpg"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Gris", "Bleu", "Noir"],
+    "isNew": true,
+    "isOnSale": false
+  },
+  {
+    "id": 9,
+    "name": "Casquette Urban",
+    "type": "Accessoire",
+    "material": "Coton bio",
+    "price": 19.99,
+    "description": "Casquette ajustable avec logo brodé. Complète parfaitement ton look urban.",
+    "image": "cap1.jpg",
+    "images": [
+      "cap1.jpg",
+      "cap1-2.jpg"
+    ],
+    "sizes": ["Unique"],
+    "colors": ["Noir", "Blanc", "Bleu"],
+    "isNew": false,
+    "isOnSale": false
+  },
+  {
+    "id": 10,
+    "name": "Robe Midi",
+    "type": "T-shirt",
+    "material": "Lin",
+    "price": 44.99,
+    "originalPrice": 59.99,
+    "description": "Robe midi en lin fluide, parfaite pour un look estival élégant et décontracté.",
+    "image": "robe1.jpg",
+    "images": [
+      "robe1.jpg",
+      "robe1-2.jpg"
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Blanc", "Beige", "Vert"],
+    "isNew": false,
+    "isOnSale": true
+  }
+]

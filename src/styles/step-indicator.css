@@ -1,0 +1,224 @@
+/* Step Indicator Styles */
+
+.step-indicator {
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-xl) 0;
+  background-color: var(--background-light);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  max-width: 180px;
+}
+
+/* Step Circle */
+.step-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background-color: var(--background-color);
+  border: 3px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  transition: all var(--transition-normal);
+  position: relative;
+  z-index: 2;
+}
+
+.step.active .step-circle {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  transform: scale(1.1);
+  box-shadow: 0 0 0 4px rgba(45, 55, 72, 0.1);
+}
+
+.step.completed .step-circle {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+.step-number {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-light);
+}
+
+.step.active .step-number,
+.step.completed .step-number {
+  color: var(--text-white);
+}
+
+.check-icon {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Step Content */
+.step-content {
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.step-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-light);
+  margin-bottom: var(--spacing-xs);
+  transition: color var(--transition-fast);
+}
+
+.step.active .step-title {
+  color: var(--primary-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.step.completed .step-title {
+  color: var(--secondary-color);
+}
+
+.step-description {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+  margin: 0;
+  transition: color var(--transition-fast);
+}
+
+.step.active .step-description {
+  color: var(--text-secondary);
+}
+
+.step.completed .step-description {
+  color: var(--text-secondary);
+}
+
+/* Step Connector */
+.step-connector {
+  position: absolute;
+  top: 25px;
+  left: 60%;
+  width: calc(100% - 50px);
+  height: 3px;
+  background-color: var(--border-color);
+  transition: background-color var(--transition-normal);
+  z-index: 1;
+}
+
+.step:last-child .step-connector {
+  display: none;
+}
+
+.step-connector.completed {
+  background-color: var(--secondary-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+}
+
+/* Animations */
+.step.active .step-circle {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(45, 55, 72, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(45, 55, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 55, 72, 0);
+  }
+}
+
+.step.completed .step-circle {
+  animation: checkmark 0.5s ease-in-out;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .steps-container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .step {
+    max-width: none;
+  }
+  
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .step-number,
+  .check-icon {
+    font-size: var(--font-size-md);
+  }
+  
+  .step-title {
+    font-size: var(--font-size-sm);
+  }
+  
+  .step-description {
+    font-size: var(--font-size-xs);
+  }
+  
+  .step-connector {
+    top: 20px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-description {
+    display: none;
+  }
+  
+  .step-title {
+    font-size: var(--font-size-xs);
+  }
+  
+  .step-circle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .step-connector {
+    top: 17px;
+  }
+}

@@ -1,0 +1,209 @@
+/* Shop Page Styles */
+
+.shop {
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+/* Shop Header */
+.shop-header {
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--background-color) 100%);
+  margin-bottom: var(--spacing-xl);
+}
+
+.shop-header h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shop-header p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Shop Content Layout */
+.shop-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .shop-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .shop-header {
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .shop-header h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .shop-header p {
+    font-size: var(--font-size-md);
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* Loading State */
+.shop.loading {
+  pointer-events: none;
+}
+
+.shop.loading .shop-content {
+  opacity: 0.7;
+}
+
+/* Filter Toggle for Mobile */
+.filter-toggle {
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+  transition: all var(--transition-fast);
+}
+
+.filter-toggle:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .filter-toggle::after {
+    content: '▼';
+    transition: transform var(--transition-fast);
+  }
+  
+  .filter-toggle.active::after {
+    transform: rotate(180deg);
+  }
+  
+  .filter-sidebar {
+    display: none;
+  }
+  
+  .filter-sidebar.show {
+    display: block;
+    animation: slideDown var(--transition-normal) ease-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Breadcrumb Navigation */
+.shop-breadcrumb {
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.shop-breadcrumb a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.shop-breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.shop-breadcrumb span {
+  margin: 0 var(--spacing-sm);
+  color: var(--text-light);
+}
+
+/* Product Count Summary */
+.shop-summary {
+  background-color: var(--background-light);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.shop-summary p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Empty State */
+.shop-empty {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  background-color: var(--background-light);
+  border-radius: var(--radius-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+.shop-empty h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.shop-empty p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.shop-empty-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.5;
+}
+
+/* Animation for page load */
+.shop {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
